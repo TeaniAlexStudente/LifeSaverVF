@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>LifeSaver - Home</title>
+
+        <script>
+            function ControlloLogin(){
+                if (document.getElementById("utente").checked == true){
+                    console.log("Login effettuato come utente")
+                    window.location.href = "login_U.jsp"
+                }     
+                else{
+                    console.log("Login effettuato come genitore")
+                    window.location.href = "login_G.jsp"
+                }
+            }
+
+            function ControlloRegistrazione(){
+                if (document.getElementById("utente").checked == true){
+                    console.log("Registrazione effettuata come utente")
+                    window.location.href = "registrazione_U.html";
+                }     
+                else{
+                    console.log("Registrazione effettuata come genitore")
+                    window.location.href = "registrazione_G.html";
+                }
+            }
+        </script>
+
+    </head>
+
+    <body>
+        <h1>LifeSaver - Home</h1>
+
+        <input type = radio name = "tipo" id = "utente" value = "utente" checked> Utente <br> <br>
+        <input type = radio name = "tipo" id = "Genitore" value = "Genitore"> Genitore <br> <br>
+
+        <input type="button" value="Login" onclick = "ControlloLogin()"/> <br> <br>       
+        <input type = "button" value="Registrazione" onclick = "ControlloRegistrazione()"> <br> 
+
+
+    </body>
+</html>
